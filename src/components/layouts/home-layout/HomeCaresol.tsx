@@ -10,12 +10,16 @@ import Image from 'next/image';
 
 const HomeCaresol = () => {
   return (
-    <div className='h-full rounded-[3rem] overflow-hidden p-[2rem] outline-[1px] shadow-lg outline-gray-200 outline bg-primary-light/5'>
-      <div className='relative w-full h-full rounded-[1rem] overflow-hidden'>
+    <div className='h-auto rounded-[3rem] overflow-hidden p-[2rem] outline-[1px] shadow-lg outline-gray-200 outline bg-primary-light/5'>
+      <div className='relative w-full h-auto rounded-[1rem] overflow-hidden'>
         <Image
           alt='Girl smilling with phone in hand'
-          fill
+          // fill
+          layout='responsive'
           src={'/caresol-img-1.webp'}
+          objectFit='cover'
+          width={100}
+          height={100}
         />
       </div>
       {/* <Swiper

@@ -7,6 +7,9 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  future: {
+    hoverOnlyWhenSupported: true, // 👈 enable hover only when supported
+  },
   theme: {
     extend: {
       container: {
@@ -19,6 +22,9 @@ const config: Config = {
         },
         center: true,
       },
+      boxShadow: {
+        paper1: '0 1px 1px 0 #00000040',
+      },
       colors: {
         primary: {
           dark: '#680F31',
@@ -26,6 +32,7 @@ const config: Config = {
           light: '#E4236C',
           text: '#ffffff',
         },
+        canvas: '#FFFBFD',
         brand: {
           gray: {
             'extra-dark': '#545454',

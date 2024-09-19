@@ -4,7 +4,7 @@ import { Lato, Lora } from 'next/font/google';
 import './globals.css';
 import { ChatPage, HomeLayout } from '@/components';
 import AuthProvider, { AuthConsumer } from '@/features/AuthenticationContext';
-import ChatLayout from '@/components/layouts/ChatLayout';
+import ChatLayout from '@/components/layouts/chat/ChatLayout';
 import { getUser } from './actions';
 import Device from '@/features/DeviceProvider';
 

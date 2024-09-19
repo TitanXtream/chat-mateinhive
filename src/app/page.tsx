@@ -21,7 +21,7 @@ export default function Home() {
         </p>
       </section>
       <Section>
-      <Image
+        <Image
           alt='chatting page image'
           src={'/phone-image-1.png'}
           layout='resposive'
@@ -40,10 +40,8 @@ export default function Home() {
             real conversations that matter.
           </p>
         </div>
-        
       </Section>
       <Section>
-       
         <div className='flex flex-col gap-[2rem] max-sm:items-center'>
           <h1 className='font-bold text-[3rem] sm:text-start text-center'>
             Your Privacy?
@@ -70,7 +68,7 @@ export default function Home() {
           className='h-auto w-auto drop-shadow-md'
         />
       </Section>
-      
+
       <Section>
         <Image
           alt='chatting page image'
