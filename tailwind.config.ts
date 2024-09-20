@@ -24,6 +24,7 @@ const config: Config = {
       },
       boxShadow: {
         paper1: '0 1px 1px 0 #00000040',
+        paper3: '0 3px 10px 1px #00000020',
       },
       colors: {
         primary: {
