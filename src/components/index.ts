@@ -11,3 +11,4 @@ export * from './ui/Buttons';
 export * from './ui/DropdownMenu';
 
 export { default as ChatListItem } from './layouts/chat/ChatListItem';
+export { default as MessageInputBar } from './layouts/chat/MessageInputBar';

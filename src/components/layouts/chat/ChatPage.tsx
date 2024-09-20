@@ -24,6 +24,7 @@ import DropdownMenu, {
   DropdownMenuItems,
 } from '@/components/ui/DropdownMenu';
 import { useAuthContext } from '@/features/AuthenticationProvider';
+import MessageInputBar from './MessageInputBar';
 
 const ChatPage = () => {
   const [openNewChatSearchbar, setOpenNewChatSearchbar] = useState(false);
@@ -174,18 +175,7 @@ const ChatPage = () => {
           }}
         >
           <ChatBox />
-          <div className='h-[4rem] shrink-0  bg-brand-gray-extra-light flex px-[1rem] py-[0.5rem]'>
-            <IconButton>
-              <SmileIcon className='fill-brand-gray-dark' />
-            </IconButton>
-            <input
-              className='bg-white h-[3rem] px-[1rem] rounded-[1rem] w-full outline-none ring-0 placeholder:text-brand-gray-main'
-              placeholder='Search from my list'
-            />
-            <IconButton>
-              <SendIcon className='fill-brand-gray-dark' />
-            </IconButton>
-          </div>
+          <MessageInputBar />
         </div>
       </div>
     </div>
