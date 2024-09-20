@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const HomeCaresol = () => {
   return (
-    <div className='h-auto rounded-[3rem] overflow-hidden p-[2rem] outline-[1px] shadow-lg outline-gray-200 outline bg-primary-light/5'>
+    <div className='h-auto md:rounded-[3rem] rounded-[2rem] overflow-hidden md:p-[2rem] p-[1rem] outline-[1px] shadow-lg outline-gray-200 outline bg-primary-light/5'>
       <div className='relative w-full h-auto rounded-[1rem] overflow-hidden'>
         <Image
           alt='Girl smilling with phone in hand'

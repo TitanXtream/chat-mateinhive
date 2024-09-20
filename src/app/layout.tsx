@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 // import localFont from 'next/font/local';
-import { Lato, Lora } from 'next/font/google';
+import { Lato } from 'next/font/google';
 import './globals.css';
 import { ChatPage, HomeLayout } from '@/components';
 import AuthProvider, { AuthConsumer } from '@/features/AuthenticationProvider';
-import ChatLayout from '@/components/layouts/chat/ChatLayout';
 import { getUser } from './actions';
 import Device from '@/features/DeviceProvider';
 import ChatPageSupportProvicer from '@/features/ChatPageSupportProvicer';

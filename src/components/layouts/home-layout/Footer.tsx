@@ -10,7 +10,6 @@ const Footer = () => {
             <Image
               src={'/long-logo-footer.svg'}
               alt={'logo'}
-              layout='responsive'
               width={100}
               height={100}
               sizes='100vh'
@@ -27,9 +26,9 @@ const Footer = () => {
             <p className='mt-[2rem]'>
               Feeling lonely? Our app connects you with someone new, someone you
               don’t know—so you can share your thoughts without hesitation.
-              Whether it's things you wouldn't tell friends or family, we're
-              here to give you a safe space to open up and feel heard. Join us,
-              and find a listening ear whenever you need one
+              Whether it&apos;s things you wouldn&apos;t tell friends or family,
+              we&apos;re here to give you a safe space to open up and feel
+              heard. Join us, and find a listening ear whenever you need one
             </p>
           </div>
           <div className='max-w-[22rem]'>

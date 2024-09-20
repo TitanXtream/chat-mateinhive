@@ -1,5 +1,5 @@
 import React from 'react';
-import Picker from 'emoji-picker-react';
+// import Picker from 'emoji-picker-react';
 import { IconButton } from '@/components/ui/Buttons';
 import { SendIcon, SmileIcon } from '@/assets/icons';
 

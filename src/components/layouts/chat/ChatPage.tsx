@@ -1,12 +1,6 @@
 'use client';
 
-import {
-  CrossIcon,
-  DotsIcon,
-  PlusIcon,
-  SendIcon,
-  SmileIcon,
-} from '@/assets/icons';
+import { CrossIcon, DotsIcon, PlusIcon } from '@/assets/icons';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { IconButton } from '../../ui/Buttons';
@@ -18,7 +12,7 @@ import { useChatSupportContext } from '@/features/ChatPageSupportProvicer';
 
 import FindNewFriendsButton from './FindNewFriendsButton';
 import ChatFilterBox from './ChatFilterBox';
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
+
 import DropdownMenu, {
   DropdownMenuItem,
   DropdownMenuItems,
@@ -36,11 +30,10 @@ const ChatPage = () => {
     <div className='w-full h-[100svh] bg-red-200 flex items-stretch [--header-height:4rem]'>
       <div className='w-[460px] shrink-0 flex flex-col items-stretch'>
         <div className='h-[--header-height] bg-white shrink-0 px-[1rem] py-[0.5rem]'>
-          <div className='relative h-full flex justify-between items-stretch w-full'>
+          <div className='relative h-full flex justify-between items-stretch w-full bg-red'>
             <Image
               src={'/name-logo.svg'}
               alt={'logo'}
-              layout='reponsive'
               width={100}
               height={100}
               className='h-auto w-auto overflow-hidden'

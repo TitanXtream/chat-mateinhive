@@ -9,25 +9,17 @@ import React, { ReactNode } from 'react';
 const TopNavbar = () => {
   const { setUser } = useAuthContext();
   return (
-    <nav className='container flex gap-[1rem] justify-between h-full items-center'>
-      {/* <Image
+    <nav className='container relative h-full flex justify-between items-center w-full'>
+      <Image
         src={'/long-logo.svg'}
         alt={'logo'}
-        layout='responsive'
         width={100}
         height={100}
-        // sizes='1vw'
-        style={{
-          maxHeight: '3rem',
-          maxWidth: 'max-containt',
-        }}
-        className='flex max-h-[3rem] max-w-fit'
+        className='max-h-[3rem] h-auto w-auto overflow-hidden'
         blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADA...'
         placeholder='blur'
         loading='lazy'
-      /> */}
-
-      <img src='/long-logo.svg' className='h-full max-h-[3rem]' />
+      />
 
       <ul className='flex gap-[3rem]'>
         <li className=''>
