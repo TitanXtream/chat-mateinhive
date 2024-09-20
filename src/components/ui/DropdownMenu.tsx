@@ -46,19 +46,29 @@ export const DropdownMenuItems = ({
   );
 };
 
+type LinkItemType = {
+  as?: 'a';
+  href: string;
+};
+type ButtonItemType = {
+  as?: 'button';
+  onClick?: () => void;
+};
+
 export const DropdownMenuItem = ({
   children,
   as = 'button',
+  ...props
 }: {
   children: React.ReactNode;
-  as?: 'link' | 'button';
-}) => {
+} & (LinkItemType | ButtonItemType)) => {
   return (
     <MenuItem
-      as={as === 'link' ? 'a' : 'button'}
+      as={as === 'a' ? Link : 'button'}
       className={
         'h-[2.5rem] w-full hover:bg-brand-gray-extra-light/50 flex items-center px-[1rem] text-[0.875rem] text-brand-gray-extra-dark'
       }
+      {...props}
     >
       {children}
     </MenuItem>

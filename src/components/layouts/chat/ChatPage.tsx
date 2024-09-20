@@ -23,10 +23,13 @@ import DropdownMenu, {
   DropdownMenuItem,
   DropdownMenuItems,
 } from '@/components/ui/DropdownMenu';
+import { useAuthContext } from '@/features/AuthenticationProvider';
 
 const ChatPage = () => {
   const [openNewChatSearchbar, setOpenNewChatSearchbar] = useState(false);
-  const { setIsSearching, isSearching } = useChatSupportContext();
+  const { isSearching } = useChatSupportContext();
+
+  const { setUser } = useAuthContext();
 
   return (
     <div className='w-full h-[100svh] bg-red-200 flex items-stretch [--header-height:4rem]'>
@@ -55,7 +58,9 @@ const ChatPage = () => {
               >
                 <DropdownMenuItems>
                   <DropdownMenuItem>Settings</DropdownMenuItem>
-                  <DropdownMenuItem>Log out</DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setUser(null)}>
+                    Log out
+                  </DropdownMenuItem>
                 </DropdownMenuItems>
               </DropdownMenu>
             </div>

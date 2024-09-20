@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/Buttons';
-import { useAuthContext } from '@/features/AuthenticationContext';
+import { useAuthContext } from '@/features/AuthenticationProvider';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { ReactNode } from 'react';
