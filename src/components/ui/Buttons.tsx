@@ -22,15 +22,23 @@ export const Button = ({ children, fullWidth, ...props }: Props) => {
 type IconButtonProps = {
   children: ReactNode;
   size?: 'small' | 'large';
-};
-export const IconButton = ({ children, size = 'large' }: IconButtonProps) => {
+} & Omit<
+  DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
+  'className'
+>;
+export const IconButton = ({
+  children,
+  size = 'large',
+  ...props
+}: IconButtonProps) => {
   return (
     <button
+      {...props}
       className={`hover:bg-brand-gray-extra-light/50 aspect-square flex items-center justify-center ${
         size === 'large'
           ? 'rounded-[1rem] h-[3rem] min-w-[3rem] [&>#mh-icon-frame]:size-[1.5rem]'
           : 'rounded-[0.5rem] h-[2rem] min-w-[2rem] [&>#mh-icon-frame]:size-[1rem]'
-      }`}
+      } disabled:pointer-events-none disabled:opacity-50`}
     >
       {children}
     </button>

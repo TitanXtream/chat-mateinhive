@@ -7,6 +7,7 @@ import AuthProvider, { AuthConsumer } from '@/features/AuthenticationContext';
 import ChatLayout from '@/components/layouts/chat/ChatLayout';
 import { getUser } from './actions';
 import Device from '@/features/DeviceProvider';
+import ChatPageSupportProvicer from '@/features/ChatPageSupportProvicer';
 
 const defaultFonts = Lato({
   variable: '--font-family',
@@ -35,7 +36,11 @@ export default async function RootLayout({
           <Device>
             {() => (
               <AuthConsumer
-                loggedInChild={<ChatPage />}
+                loggedInChild={
+                  <ChatPageSupportProvicer>
+                    <ChatPage />
+                  </ChatPageSupportProvicer>
+                }
                 unloggedInChild={<HomeLayout>{children}</HomeLayout>}
               />
             )}
