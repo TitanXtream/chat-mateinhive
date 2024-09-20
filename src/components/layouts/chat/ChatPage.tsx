@@ -57,15 +57,32 @@ const ChatPage = () => {
           }}
         >
           <div className='h-full flex flex-col gap-[1rem] p-[1rem] items-stretch w-full overflow-auto'>
-            <div className='relative w-full min-h-[100rem] bg-red-300 flex flex-col gap-[1rem]'>
+            <div className='relative w-full flex flex-col gap-[1rem]'>
               <ChatDate />
-              <SentMessage>Hi there! How are you?</SentMessage>
-              <RecievedMessage>
-                <p>Hi there</p>
-              </RecievedMessage>
-              <RecievedMessage>
-                <p>How are you</p>
-              </RecievedMessage>
+              <div className='flex flex-col w-full gap-[0.25rem]'>
+                <SentMessage text='Hi there! How are you?' />
+              </div>
+              <div className='flex flex-col w-full gap-[0.25rem]'>
+                <RecievedMessage text='Hi there' />
+                <RecievedMessage text='How are you?' />
+              </div>
+              <div className='flex flex-col w-full gap-[0.25rem]'>
+                <SentMessage
+                  text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
+                gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
+                rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb'
+                />
+                <SentMessage
+                  text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
+                gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
+                rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb'
+                />
+                <SentMessage
+                  text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
+                gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
+              rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb 😃'
+                />
+              </div>
             </div>
           </div>
           <div className='h-[4rem] shrink-0  bg-brand-gray-extra-light'></div>

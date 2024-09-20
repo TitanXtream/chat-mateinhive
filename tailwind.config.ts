@@ -29,7 +29,7 @@ const config: Config = {
         primary: {
           dark: '#680F31',
           DEFAULT: '#C50055',
-          light: '#E4236C',
+          light: '#FFE8F0',
           text: '#ffffff',
         },
         canvas: '#FFFBFD',
