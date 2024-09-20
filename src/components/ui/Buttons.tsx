@@ -22,7 +22,7 @@ type IconButtonProps = {
 };
 export const IconButton = ({ children }: IconButtonProps) => {
   return (
-    <button className='hover:bg-gray-100  aspect-square flex items-center justify-center rounded-[1rem] h-[3rem] [&>#mh-icon-frame]:size-[1.5rem]'>
+    <button className='hover:bg-brand-gray-extra-light/50 aspect-square flex items-center justify-center rounded-[1rem] h-[3rem] [&>#mh-icon-frame]:size-[1.5rem]'>
       {children}
     </button>
   );

@@ -1,4 +1,4 @@
-import { DotsIcon, PlusIcon } from '@/assets/icons';
+import { DotsIcon, PlusIcon, SendIcon, SmileIcon } from '@/assets/icons';
 import Image from 'next/image';
 import React from 'react';
 import { IconButton } from '../../ui/Buttons';
@@ -48,8 +48,31 @@ const ChatPage = () => {
           </div>
         </div>
       </div>
+
       <div className='w-full flex flex-col items-stretch'>
-        <div className='h-[--header-height] bg-brand-gray-extra-light shrink-0'></div>
+        <div className='h-[--header-height] bg-brand-gray-extra-light shrink-0'>
+          <div className='relative h-full flex justify-between items-stretch w-full'>
+            <div className='w-full flex gap-[1rem] px-[1rem] py-[0.5rem] overflow-hidden'>
+              <div className='size-[3rem] rounded-[1rem] bg-brand-gray-main shrink-0'></div>
+              <div className='text-start w-full overflow-hidden'>
+                <div className='flex items-center gap-[0.25rem]'>
+                  <h1 className='font-semibold truncate w-full'>AGG441ZZC</h1>
+                </div>
+                <div className='flex items-center gap-[0.25rem] w-full'>
+                  <p className='text-[0.85rem] truncate text-brand-gray-dark w-full'>
+                    How are you doing? All cool djhgvjhab
+                    vkdahvhadkjvhakjhvkahvjlkahjkv hkuaefh oajh
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='flex items-center'>
+              <IconButton>
+                <DotsIcon className='fill-primary-dark' />
+              </IconButton>
+            </div>
+          </div>
+        </div>
         <div
           className='h-full bg-[url("/chat-box-background.webp")] bg-repeat flex flex-col overflow-hidden'
           style={{
@@ -85,7 +108,18 @@ const ChatPage = () => {
               </div>
             </div>
           </div>
-          <div className='h-[4rem] shrink-0  bg-brand-gray-extra-light'></div>
+          <div className='h-[4rem] shrink-0  bg-brand-gray-extra-light flex px-[1rem] py-[0.5rem]'>
+            <IconButton>
+              <SmileIcon className='fill-brand-gray-dark' />
+            </IconButton>
+            <input
+              className='bg-white h-[3rem] px-[1rem] rounded-[1rem] w-full outline-none ring-0 placeholder:text-brand-gray-main'
+              placeholder='Search from my list'
+            />
+            <IconButton>
+              <SendIcon className='fill-brand-gray-dark' />
+            </IconButton>
+          </div>
         </div>
       </div>
     </div>
