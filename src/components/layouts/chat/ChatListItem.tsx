@@ -41,7 +41,7 @@ const ChatListItem = ({ mutted, ...props }: ChatListItemType) => {
             <div className='[&>#mh-icon-frame]:size-[1rem]  flex gap-[0.25rem]'>
               {mutted ? <CutBellIcon className='fill-brand-gray-dark' /> : ''}
               {props.status === 0 ? (
-                <div className='bg-[#6FCC40] rounded-[2rem] text-[0.75rem] text-white h-[1rem] min-w-[1rem] flex items-center justify-center'>
+                <div className='bg-success rounded-[2rem] text-[0.75rem] text-white h-[1rem] min-w-[1rem] flex items-center justify-center'>
                   {props.notifications}
                 </div>
               ) : props.status === 1 ? (
@@ -49,7 +49,7 @@ const ChatListItem = ({ mutted, ...props }: ChatListItemType) => {
               ) : props.status === 2 ? (
                 <DoubleTickIcon className='fill-brand-gray-dark' />
               ) : (
-                <DoubleTickIcon className='fill-[#0094e9]' />
+                <DoubleTickIcon className='fill-message-sent' />
               )}
             </div>
           </div>

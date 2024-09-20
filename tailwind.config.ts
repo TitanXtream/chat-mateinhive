@@ -32,6 +32,8 @@ const config: Config = {
           light: '#FFE8F0',
           text: '#ffffff',
         },
+        success: '#6FCC40',
+        'message-sent': '#0094e9',
         canvas: '#FFFBFD',
         brand: {
           gray: {

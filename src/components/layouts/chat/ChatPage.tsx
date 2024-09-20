@@ -5,6 +5,7 @@ import { IconButton } from '../../ui/Buttons';
 import ChatListItem from './ChatListItem';
 import ChatDate from './ChatDate';
 import { RecievedMessage, SentMessage } from './ChatMessages';
+import { ChatStatus } from './types';
 
 const ChatPage = () => {
   return (
@@ -42,9 +43,13 @@ const ChatPage = () => {
             </IconButton>
           </div>
           <div className='flex flex-col w-full items-stretch'>
-            <ChatListItem status={0} notifications={2} mutted />
-            <ChatListItem status={1} />
-            <ChatListItem status={3} />
+            <ChatListItem
+              status={ChatStatus.recieved}
+              notifications={2}
+              mutted
+            />
+            <ChatListItem status={ChatStatus.justSent} />
+            <ChatListItem status={ChatStatus.sentAndSeen} />
           </div>
         </div>
       </div>
@@ -81,29 +86,90 @@ const ChatPage = () => {
         >
           <div className='h-full flex flex-col gap-[1rem] p-[1rem] items-stretch w-full overflow-auto'>
             <div className='relative w-full flex flex-col gap-[1rem]'>
-              <ChatDate />
+              <ChatDate time='16-09-2024' />
               <div className='flex flex-col w-full gap-[0.25rem]'>
-                <SentMessage text='Hi there! How are you?' />
+                <SentMessage
+                  text='Hi there! How are you?'
+                  time='12:00 am'
+                  status={ChatStatus.sentAndSeen}
+                />
               </div>
               <div className='flex flex-col w-full gap-[0.25rem]'>
-                <RecievedMessage text='Hi there' />
-                <RecievedMessage text='How are you?' />
+                <RecievedMessage text='Hi there' time={'12:03 am'} />
+                <RecievedMessage text='How are you?' time={'12:03 am'} />
               </div>
               <div className='flex flex-col w-full gap-[0.25rem]'>
                 <SentMessage
+                  time='12:05 am'
+                  status={ChatStatus.sentAndSeen}
                   text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
                 gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
                 rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb'
                 />
                 <SentMessage
+                  time='12:05 am'
+                  status={ChatStatus.sentAndSeen}
                   text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
                 gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
                 rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb'
                 />
                 <SentMessage
+                  time='12:06 am'
+                  status={ChatStatus.sentAndSeen}
                   text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
                 gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
               rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb 😃'
+                />
+              </div>
+            </div>
+            <div className='relative w-full flex flex-col gap-[1rem]'>
+              <ChatDate time='17-09-2024' />
+              <div className='flex flex-col w-full gap-[0.25rem]'>
+                <SentMessage
+                  time='12:10 am'
+                  status={ChatStatus.sentAndSeen}
+                  text='Hi there! How are you?'
+                />
+              </div>
+              <div className='flex flex-col w-full gap-[0.25rem]'>
+                <RecievedMessage text='Cool' time={'12:26 am'} />
+                <RecievedMessage
+                  time={'12:26 am'}
+                  text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
+                gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
+                rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb'
+                />
+              </div>
+              <div className='flex flex-col w-full gap-[0.25rem]'>
+                <SentMessage
+                  time='12:40 am'
+                  status={ChatStatus.sentAndSeen}
+                  text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
+                gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
+                rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb'
+                />
+                <SentMessage
+                  time='4:30 am'
+                  status={ChatStatus.sentAndSeen}
+                  text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
+                gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
+                rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb'
+                />
+                <SentMessage
+                  time='4:32 am'
+                  status={ChatStatus.completeSent}
+                  text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
+                gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
+              rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb 😃'
+                />
+              </div>
+              <div className='flex flex-col w-full gap-[0.25rem]'>
+                <RecievedMessage text='Cool' time={'12:26 am'} />
+                <RecievedMessage
+                  time={'12:26 am'}
+                  text='I am fine jahdegfk ihfedsouahkj jeoajf eoijgoij oij pei loiej
+                gtpij p oilerjtgpisj jg loirrj pijpigj pisrj gprisj pirjg pi
+                rpoisjgpijkp isj gpi sij psj pjsp jpijp dkjhb'
                 />
               </div>
             </div>
