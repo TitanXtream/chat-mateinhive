@@ -21,7 +21,7 @@ export default function Home() {
           </strong>
         </p>
       </section>
-      <Section imageUrl='/phone-image-1-2.png' title='Only Text?'>
+      <Section imageUrl='/phone-image-1.png' title='Only Text?'>
         <p className='sm:text-start text-center'>
           Connect through words and emojis only. No images, no video, just real
           conversations that matter.
@@ -41,7 +41,7 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section imageUrl='/phone-image-2-2.png' title='Data Protection'>
+      <Section imageUrl='/phone-image-2.png' title='Data Protection'>
         <p className='sm:text-start text-center'>
           Protecting your data is our atmost priority. All messages are
           end-to-end encrypted.
