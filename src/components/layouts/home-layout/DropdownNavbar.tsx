@@ -2,9 +2,12 @@ import { CrossIcon } from '@/assets/icons';
 import { Button, IconButton } from '@/components/ui/Buttons';
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
+import { useRouter } from 'next/navigation';
 
 const DropdownNavbar = ({ onClose }: { onClose: () => void }) => {
-  console.log('Menu Rendered');
+  // console.log('Menu Rendered');
+
+  const router = useRouter();
 
   return (
     <div className='flex flex-col'>
@@ -39,20 +42,7 @@ const DropdownNavbar = ({ onClose }: { onClose: () => void }) => {
         <DropNavMenuItem
           onClick={() => {
             onClose();
-          }}
-        >
-          Our Goal
-        </DropNavMenuItem>
-        <DropNavMenuItem
-          onClick={() => {
-            onClose();
-          }}
-        >
-          Privacy
-        </DropNavMenuItem>
-        <DropNavMenuItem
-          onClick={() => {
-            onClose();
+            router.push('how-it-works');
           }}
         >
           How it works
@@ -60,6 +50,24 @@ const DropdownNavbar = ({ onClose }: { onClose: () => void }) => {
         <DropNavMenuItem
           onClick={() => {
             onClose();
+            router.push('our-goal');
+          }}
+        >
+          Our Goal
+        </DropNavMenuItem>
+        <DropNavMenuItem
+          onClick={() => {
+            onClose();
+            router.push('privacy');
+          }}
+        >
+          Privacy
+        </DropNavMenuItem>
+
+        <DropNavMenuItem
+          onClick={() => {
+            onClose();
+            router.push('contact-us');
           }}
         >
           Contact us

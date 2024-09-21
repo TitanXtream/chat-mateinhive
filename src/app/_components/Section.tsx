@@ -32,7 +32,7 @@ const Section = ({
       />
       <div
         className={`flex flex-col max-sm:items-center ${
-          isMobileOnly ? 'text-[1rem] gap-[1rem]' : 'text-[1.5rem]'
+          isMobileOnly ? 'text-[1rem] gap-[1rem]' : 'text-[1.5rem] gap-[2rem]'
         }`}
       >
         <h1

@@ -19,30 +19,33 @@ const TopNavbar = () => {
   const [navMenuIsOpenned, setNavMenuIsOpenned] = useState(false);
   return (
     <>
-      <nav className='container relative h-full flex justify-between items-center w-full gap-[1rem] backdrop-blur-sm bg-canvas-dark/60'>
-        <Image
-          src={'/long-logo.svg'}
-          alt={'logo'}
-          width={100}
-          height={100}
-          className='max-h-[3rem] h-auto w-auto overflow-hidden'
-          blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADA...'
-          placeholder='blur'
-          loading='lazy'
-        />
+      <nav className='container relative h-full flex justify-between items-center w-full gap-[1rem] backdrop-blur-md bg-canvas-dark/60'>
+        <Link href={'/'}>
+          <Image
+            src={'/long-logo.svg'}
+            alt={'logo'}
+            width={100}
+            height={100}
+            className='max-h-[3rem] h-auto w-auto overflow-hidden'
+            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADA...'
+            placeholder='blur'
+            loading='lazy'
+          />
+        </Link>
 
         <ul className='lg:flex hidden gap-[3rem]'>
+          <li>
+            <Navlink href={'/how-it-works'}>How it works</Navlink>
+          </li>
           <li className=''>
             <Navlink href={'/our-goal'}>Our Goal</Navlink>
           </li>
           <li className=''>
             <Navlink href={'/privacy'}>Privacy</Navlink>
           </li>
+
           <li>
-            <Navlink href={'/help-center'}>How it works</Navlink>
-          </li>
-          <li>
-            <Navlink href={'/help-center'}> Contact us</Navlink>
+            <Navlink href={'/contact-us'}>Contact us</Navlink>
           </li>
         </ul>
         <div className='max-lg:hidden'>

@@ -5,7 +5,7 @@ import { Suspense } from 'react';
 
 export default function Home() {
   return (
-    <div className='container'>
+    <div>
       <Suspense fallback={<LoadingSpinner />}>
         <HomeCaresol />
       </Suspense>
