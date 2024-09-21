@@ -7,40 +7,85 @@ const page = () => {
     <PageLayout>
       <Heading>How it works</Heading>
       <div>
-        <Heading varient='small'>Find matches</Heading>
-        <p>
-          Time to find people who are also looking for someone like you to speak
-          freely and openly. We find random people, from almost anywhere in the
-          world, to match and speak with you via our text messaging service. Our
-          goal is to reduce loneliness by providing opportuity to talk to some
-          new people via our platform.
-        </p>
-      </div>
-      <div>
-        <Heading varient='small'>Filters</Heading>
-        <p>
-          The finding process will be personlaised for you based on the
-          description of the type of the people you want to talk. This will be
-          done by the filter putting some parameters over the finding and
-          matching process.
-        </p>
-      </div>
-      <div>
-        <Heading varient='small'>Hidden Identity</Heading>
-        <p>
-          Here is the fun part. When you get matches you will not see there
-          names and any other info except age and gender. Now it is up to you to
-          find out who he or she is, what he or she likes, etcs. Note: after
-          talking for a while and gaining enough info about the person if you
-          want to do anthing like image sharing or dating then there are other
-          apps for that, take each others contact and feel free to use those
-          platforms but if need any new mate again you are welcome.
-        </p>
-      </div>
-
-      <div>
         <Heading varient='small'>Open for any conversation</Heading>
-        <p>...</p>
+        <p>
+          On most platforms, your profile and identity are visible, making it
+          hard to speak freely. But here, it's different. With only your age and
+          gender shared, your identity remains hidden, creating a space where
+          you can express yourself openly. Whether it's something you can't
+          share with friends or family, this platform is designed to provide a
+          safe environment for meaningful conversations. It’s a place to find
+          relief from pain and loneliness through honest, anonymous
+          interactions.
+        </p>
+      </div>
+      <div>
+        <Heading varient='small'>Mystery Connections</Heading>
+
+        <p>
+          The excitement of connection begins with the mystery. When you're
+          connected, only basic details like age and gender are revealed,
+          leaving the rest for you to discover through genuine conversation.
+          This anonymity encourages deeper discussions and fosters authentic
+          connections. We don’t just provide one user for you to connect with;
+          instead, we curate a group of potential connections to fill your day
+          with engaging conversations. You have the freedom to choose which
+          interactions you want to pursue. Whether it's your first connection or
+          your tenth, there’s always a new opportunity waiting for you.
+        </p>
+      </div>
+      <div>
+        <Heading varient='small'>Chat recomendations</Heading>
+
+        <p>
+          As you engage with your connections, the platform intelligently adapts
+          to your interactions, recommending the next set of messages to enhance
+          your conversations. This personalized approach ensures that each
+          exchange becomes more engaging and tailored to your preferences.
+        </p>
+      </div>
+      <div>
+        <Heading varient='small'>Find Connections</Heading>
+        <p>
+          Connect with individuals who are also seeking open and meaningful
+          conversations. Our platform pairs you with random users from around
+          the globe, allowing you to engage in real-time text messaging. By
+          facilitating new connections, our goal is to combat loneliness and
+          provide a supportive space where you can meet and interact with a
+          diverse range of people, each with their own unique stories.
+        </p>
+      </div>
+      <div>
+        <Heading varient='small'>Personalize with filters</Heading>
+        <p>
+          To make your experience even more personalized, our advanced filtering
+          system allows you to customize your search criteria. You can define
+          specific parameters, such as age, gender, and more, to find and
+          connect with individuals who meet your preferences. This tailored
+          approach ensures that your connections align with your interests,
+          enhancing the depth and relevance of every interaction.
+        </p>
+      </div>
+      <div>
+        <Heading varient='small'>Only Text and Emoji</Heading>
+        <p>
+          Embrace the simplicity of communication on our platform. By focusing
+          solely on text and emojis, we create a relaxed environment that
+          encourages authentic expression without the distractions of images or
+          complex media. This streamlined approach fosters meaningful
+          interactions, allowing you to convey emotions and thoughts clearly
+          while keeping the conversation light and fun. Whether you’re sharing a
+          laugh or discussing a topic close to your heart, our focus on text and
+          emojis makes every chat engaging and accessible.
+        </p>
+        <p className='mt-[0.5rem]'>
+          Looking ahead, we are excited to explore the addition of more
+          interactive GIFs to further enhance your communication experience,
+          making conversations even more engaging and expressive. Whether you’re
+          sharing a laugh or discussing a topic close to your heart, our focus
+          on text and emojis ensures that every chat remains accessible and
+          enjoyable.
+        </p>
       </div>
     </PageLayout>
   );
