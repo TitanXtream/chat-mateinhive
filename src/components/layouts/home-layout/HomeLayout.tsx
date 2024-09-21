@@ -7,7 +7,7 @@ type Props = { children: ReactNode };
 const HomeLayout = ({ children }: Props) => {
   return (
     <div>
-      <header className='h-[5rem]'>
+      <header className='h-[5rem] sticky top-0'>
         <TopNavbar />
       </header>
       <main>{children}</main>

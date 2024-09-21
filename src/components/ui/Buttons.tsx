@@ -34,7 +34,7 @@ export const IconButton = ({
   return (
     <button
       {...props}
-      className={`hover:bg-brand-gray-extra-light/50 aspect-square flex items-center justify-center ${
+      className={`relative hover:bg-brand-gray-extra-light/50 aspect-square flex items-center justify-center ${
         size === 'large'
           ? 'rounded-[1rem] h-[3rem] min-w-[3rem] [&>#mh-icon-frame]:size-[1.5rem]'
           : 'rounded-[0.5rem] h-[2rem] min-w-[2rem] [&>#mh-icon-frame]:size-[1rem]'

@@ -7,7 +7,6 @@ import {
 } from '@headlessui/react';
 import Link from 'next/link';
 import React from 'react';
-import { Button } from './Buttons';
 
 type DropdownMenuProps = {
   children: React.ReactNode;
@@ -38,7 +37,7 @@ export const DropdownMenuItems = ({
     <MenuItems
       anchor={anchor}
       className={
-        'bg-white min-w-[10rem] shadow-paper3 rounded-[1rem] overflow-hidden'
+        'bg-white z-[15] min-w-[10rem] shadow-paper3 rounded-[1rem] overflow-hidden'
       }
     >
       {children}
