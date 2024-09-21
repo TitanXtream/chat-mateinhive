@@ -35,7 +35,9 @@ const config: Config = {
         },
         success: '#6FCC40',
         'message-sent': '#0094e9',
-        canvas: '#FFFBFD',
+        // canvas: '#FFFBFD',
+
+        canvas: { DEFAULT: '#FFFBFD', dark: '#fff9fc' },
         brand: {
           gray: {
             'extra-dark': '#545454',

@@ -1,14 +1,9 @@
 'use client';
 
 import React from 'react';
-
-// Import Swiper styles
-import 'swiper/css';
-
 import Image from 'next/image';
 import { JoinWaitListSpecialButton } from '@/components/ui/Buttons';
 import { isDesktop } from 'react-device-detect';
-// import { Button } from '@/components/ui/Buttons';
 
 const HomeCaresol = () => {
   return (
@@ -25,12 +20,8 @@ const HomeCaresol = () => {
           <Image
             alt='Girl smilling with phone in hand'
             fill
-            // layout='responsive'
-            src={'/caresol-img-1.jpg'}
+            src={'/hero-banner-image.webp'}
             objectFit='cover'
-            // width={100}
-            // height={100}
-            // className='w-full h-full'
           />
           <div className='absolute z-[1] lg:top-[50%] lg:translate-y-[-50%] max-lg:bottom-[6rem] left-[--hero-image-padding] text-white max-lg:right-[--hero-image-padding]'>
             <div
@@ -62,11 +53,7 @@ const HomeCaresol = () => {
               </div>
             </div>
           </div>
-          {/* <div className='absolute z-[1] top-1 left-[1] bg-transparent'>
-          <JoinWaitListSpecialButton>
-            Join the wait list
-          </JoinWaitListSpecialButton>
-        </div> */}
+
           <div className='absolute z-[1] bottom-[--hero-image-padding] inset-x-[--hero-image-padding] w-auto flex justify-center'>
             <div className='lg:max-w-[30rem] w-full h-[3.5rem] flex items-stretch'>
               <JoinWaitListSpecialButton fullWidth>
@@ -75,11 +62,8 @@ const HomeCaresol = () => {
             </div>
           </div>
           <div className='absolute z-[1] right-[--hero-image-padding] lg:top-[10rem] w-[35%] flex justify-center top-[--hero-image-padding]'>
-            {/* --hero-image-padding */}
             <Image
               alt='Girl smilling with phone in hand'
-              // fill
-
               src={'/caresol-image-text.png'}
               width={100}
               height={100}
@@ -93,4 +77,3 @@ const HomeCaresol = () => {
 };
 
 export default HomeCaresol;
-// w-[calc(100%_-_var(--hero-image-padding))]

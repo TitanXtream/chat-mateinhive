@@ -1,6 +1,5 @@
 import { CrossIcon } from '@/assets/icons';
 import { Button, IconButton } from '@/components/ui/Buttons';
-// import { Button } from '@headlessui/react';
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
 
@@ -10,7 +9,7 @@ const DropdownNavbar = ({ onClose }: { onClose: () => void }) => {
   return (
     <div className='flex flex-col'>
       <div className='flex flex-col divide-y-[1px] divide-brand-gray-light border-b-[1px] border-brand-gray-light'>
-        <div className='flex justify-between h-[5rem] items-center px-[1rem] gap-[1rem] '>
+        <div className='container flex justify-between h-[5rem] items-center  gap-[1rem] '>
           <Image
             src={'/long-logo.svg'}
             alt={'logo'}

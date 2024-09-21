@@ -19,7 +19,7 @@ const TopNavbar = () => {
   const [navMenuIsOpenned, setNavMenuIsOpenned] = useState(false);
   return (
     <>
-      <nav className='container relative h-full flex justify-between items-center w-full gap-[1rem] z-[100]'>
+      <nav className='container relative h-full flex justify-between items-center w-full gap-[1rem] backdrop-blur-sm bg-canvas-dark/60'>
         <Image
           src={'/long-logo.svg'}
           alt={'logo'}

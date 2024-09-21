@@ -1,11 +1,14 @@
-import { Button, HomeCaresol } from '@/components';
+import { Button, HomeCaresol, LoadingSpinner } from '@/components';
 import Image from 'next/image';
 import Section from './_components/Section';
+import { Suspense } from 'react';
 
 export default function Home() {
   return (
     <div className='container'>
-      <HomeCaresol />
+      <Suspense fallback={<LoadingSpinner />}>
+        <HomeCaresol />
+      </Suspense>
 
       <section className='w-full flex flex-col gap-[2rem] md:pt-[10rem] md:pb-[5rem] py-[3rem] px-[1rem] items-center'>
         <h1 className='font-bold text-[3rem] text-center'>Feeling lonely?</h1>

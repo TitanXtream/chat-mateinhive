@@ -30,7 +30,7 @@ export default async function RootLayout({
   // fff8fb
   return (
     <html lang='en'>
-      <body className={`${defaultFonts.className} antialiased bg-[#fff9fc]`}>
+      <body className={`${defaultFonts.className} antialiased bg-canvas-dark`}>
         <AuthProvider>
           <Device>
             {() => (
