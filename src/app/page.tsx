@@ -5,9 +5,9 @@ import Section from './_components/Section';
 export default function Home() {
   return (
     <div className='container'>
-      <div className='w-full h-[40rem] my-[3rem]'>
+      <section className='w-full lg:my-[3rem] max-lg:py-[2rem] max-lg:h-[calc(100svh_-_5rem)] landscape:min-h-[50rem]'>
         <HomeCaresol />
-      </div>
+      </section>
       <section className='w-full flex flex-col gap-[2rem] md:pt-[10rem] md:pb-[5rem] py-[3rem] px-[1rem] items-center'>
         <h1 className='font-bold text-[3rem] text-center'>Feeling lonely?</h1>
         <p className='max-w-[50rem] text-center text-[1.5rem]'>

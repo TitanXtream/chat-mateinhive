@@ -2,7 +2,7 @@ import { CrossIcon } from '@/assets/icons';
 import { Button, IconButton } from '@/components/ui/Buttons';
 // import { Button } from '@headlessui/react';
 import Image from 'next/image';
-import React, { PropsWithChildren, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 const DropdownNavbar = ({ onClose }: { onClose: () => void }) => {
   console.log('Menu Rendered');

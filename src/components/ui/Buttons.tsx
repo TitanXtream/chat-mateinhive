@@ -19,6 +19,24 @@ export const Button = ({ children, fullWidth, ...props }: Props) => {
   );
 };
 
+export const JoinWaitListSpecialButton = ({
+  children,
+  fullWidth,
+  ...props
+}: Props) => {
+  return (
+    <button
+      className={`relative bg-white px-[3rem] py-[0.75rem] rounded-[1rem] hover:text-white hover:shadow-primary-dark hover:shadow-md hover:bg-primary-light transition-all duration-500 overflow-hidden group outline-[2px] outline outline-transparent hover:outline-white ${
+        fullWidth ? 'w-full' : ''
+      }`}
+      {...props}
+    >
+      <div className='absolute w-[200%] h-[200%] rounded-full bg-primary-dark z-[4] inset-0 translate-x-[100%] group-hover:translate-x-[-50%] transition transform duration-700 ease-in-out'></div>
+      <div className='relative z-[5]'>{children}</div>
+    </button>
+  );
+};
+
 type IconButtonProps = {
   children: ReactNode;
   size?: 'small' | 'large';
