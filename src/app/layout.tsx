@@ -2,11 +2,21 @@ import type { Metadata } from 'next';
 // import localFont from 'next/font/local';
 import { Lato } from 'next/font/google';
 import './globals.css';
-import { ChatPage, HomeLayout } from '@/components';
+import { ChatPage, HomeLayout, LoadingSpinner } from '@/components';
 import AuthProvider, { AuthConsumer } from '@/features/AuthenticationProvider';
 import { getUser } from './actions';
-import Device from '@/features/DeviceProvider';
+
 import ChatPageSupportProvicer from '@/features/ChatPageSupportProvicer';
+import dynamic from 'next/dynamic';
+
+const Device = dynamic(() => import('@/features/DeviceProvider'), {
+  ssr: false,
+  loading: () => (
+    <div className='w-full h-screen'>
+      <LoadingSpinner />
+    </div>
+  ),
+});
 
 const defaultFonts = Lato({
   variable: '--font-family',
