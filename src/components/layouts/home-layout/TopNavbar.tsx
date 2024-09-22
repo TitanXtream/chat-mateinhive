@@ -4,6 +4,7 @@ import { BarsIcon } from '@/assets/icons';
 import { Button, IconButton } from '@/components/ui/Buttons';
 import { useAuthContext } from '@/features/AuthenticationProvider';
 import { Dialog } from '@headlessui/react';
+import { motion } from 'framer-motion';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,7 +20,15 @@ const TopNavbar = () => {
   const [navMenuIsOpenned, setNavMenuIsOpenned] = useState(false);
   return (
     <>
-      <nav className='container relative h-full flex justify-between items-center w-full gap-[1rem] backdrop-blur-md bg-canvas-dark/60'>
+      <motion.nav
+        initial={{
+          y: '-100%',
+        }}
+        animate={{
+          y: '0',
+        }}
+        className='container relative h-full flex justify-between items-center w-full gap-[1rem] backdrop-blur-md bg-canvas-dark/60'
+      >
         <Link href={'/'}>
           <Image
             src={'/long-logo.svg'}
@@ -64,7 +73,7 @@ const TopNavbar = () => {
             <BarsIcon />
           </IconButton>
         </div>
-      </nav>
+      </motion.nav>
       <Dialog
         onClose={() => setNavMenuIsOpenned(false)}
         transition

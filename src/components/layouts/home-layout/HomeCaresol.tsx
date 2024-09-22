@@ -4,6 +4,12 @@ import React from 'react';
 import Image from 'next/image';
 import { JoinWaitListSpecialButton } from '@/components/ui/Buttons';
 import { isDesktop } from 'react-device-detect';
+import { MImotion } from '@/components';
+
+const fadeInAnimation = {
+  initial: { y: '5rem', opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+};
 
 const HomeCaresol = () => {
   return (
@@ -31,37 +37,58 @@ const HomeCaresol = () => {
                   : 'md:text-[1.1rem] text- text-[0.75em]'
               }`}
             >
-              <div className='max-lg:hidden font-semibold text-[4em] leading-[96%]'>
+              <MImotion.div className='max-lg:hidden font-semibold text-[4em] leading-[96%]'>
                 Let’s not
                 <br /> be Alone
-              </div>
-              <div className='lg:hidden font-semibold text-[3em] leading-[96%]'>
+              </MImotion.div>
+              <MImotion.div className='lg:hidden font-semibold text-[3em] leading-[96%]'>
                 Let’s not be Alone
-              </div>
-              <div
+              </MImotion.div>
+              <MImotion.div
                 className={`lg:text-[2.4em] ${
                   isDesktop ? 'text-[2.4rem]' : 'sm:text-[2rem] text-[1.5rem]'
                 } leading-[96%]`}
               >
                 Text somebody
-              </div>
-              <div className='mt-[2em] lg:max-w-[15em]'>
+              </MImotion.div>
+              <MImotion.div className='mt-[2em] lg:max-w-[15em]'>
                 But they don’t know who you are, where do you come from,
-              </div>
-              <div className='font-bold lg:max-w-[15em]'>
+              </MImotion.div>
+              <MImotion.div className='font-bold lg:max-w-[15em]'>
                 So just text whatever you want.
-              </div>
+              </MImotion.div>
             </div>
           </div>
 
           <div className='absolute z-[1] bottom-[--hero-image-padding] inset-x-[--hero-image-padding] w-auto flex justify-center'>
-            <div className='lg:max-w-[30rem] w-full h-[3.5rem] flex items-stretch'>
+            <MImotion.div
+              className='lg:max-w-[30rem] w-full h-[3.5rem] flex items-stretch'
+              initial={{ y: '5rem', opacity: 0 }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <JoinWaitListSpecialButton fullWidth>
-                Join the wait list
+                Join the waitlist
               </JoinWaitListSpecialButton>
-            </div>
+            </MImotion.div>
           </div>
-          <div className='absolute z-[1] right-[--hero-image-padding] lg:top-[10rem] w-[35%] flex justify-center top-[--hero-image-padding]'>
+          <MImotion.div
+            className='absolute z-[1] right-[--hero-image-padding] lg:top-[10rem] w-[35%] flex justify-center top-[--hero-image-padding]'
+            initial={{ x: '5rem', opacity: 0 }}
+            animate={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 1,
+              delay: 1,
+            }}
+          >
             <Image
               alt='Girl smilling with phone in hand'
               src={'/caresol-image-text.png'}
@@ -69,7 +96,7 @@ const HomeCaresol = () => {
               height={100}
               className='h-auto w-full'
             />
-          </div>
+          </MImotion.div>
         </div>
       </div>
     </section>

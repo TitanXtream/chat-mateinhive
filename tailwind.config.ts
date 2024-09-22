@@ -26,6 +26,15 @@ const config: Config = {
         paper1: '0 1px 1px 0 #00000040',
         paper3: '0 3px 10px 1px #00000020',
       },
+      // animation: {
+      //   'slow-fade-in-up': 'fade-in-up 1s linear',
+      // },
+      // keyframes: {
+      //   'fade-in-up': {
+      //     '0%': { opacity: '0', transform: 'translateY(5rem)' },
+      //     '100%': { opacity: '1', transform: 'translateY(0)' },
+      //   },
+      // },
       colors: {
         primary: {
           dark: '#680F31',
