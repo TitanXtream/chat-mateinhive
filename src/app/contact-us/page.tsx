@@ -1,13 +1,27 @@
+'use client';
+
 import React from 'react';
 import PageLayout from '../_components/PageLayout';
 import Heading from '@/components/ui/heading';
 import { EnvelopeIcon } from '@/assets/icons';
+import { MHmotion } from '@/components';
+import { animate } from 'framer-motion';
+
+const fadeInRightAnimation = {
+  initial: { opacity: 0, y: '5rem' },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5 },
+  viewport: { once: true },
+};
 
 const page = () => {
   return (
     <PageLayout>
       <div className='w-full h-auto flex items-center justify-center py-[3rem] sm:px-[2rem] px-[1rem]'>
-        <div className='text-center max-w-[30rem] w-full h-auto p-[1rem] bg-white rounded-[1rem] shadow-paper1'>
+        <MHmotion.div
+          {...fadeInRightAnimation}
+          className='text-center max-w-[30rem] w-full h-auto p-[1rem] bg-white rounded-[1rem] shadow-paper1'
+        >
           <h1 className='w-full text-center text-[1.5rem] font-semibold'>
             Contact us
           </h1>
@@ -27,7 +41,7 @@ const page = () => {
               </div>
             </a>
           </div>
-        </div>
+        </MHmotion.div>
       </div>
     </PageLayout>
   );

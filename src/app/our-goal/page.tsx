@@ -1,13 +1,25 @@
+'use client';
+
 import React from 'react';
 import PageLayout from '../_components/PageLayout';
 import Heading from '@/components/ui/heading';
 import { Button } from '@/components';
+import { MHmotion } from '@/components';
+
+const fadeInRightAnimation = {
+  initial: { opacity: 0, x: '-5rem' },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.5 },
+  viewport: { once: true },
+};
 
 const page = () => {
   return (
     <PageLayout>
-      <Heading>Our Goal</Heading>
-      <div>
+      <MHmotion.div {...fadeInRightAnimation}>
+        <Heading>Our Goal</Heading>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Encouraging Open Expression</Heading>
         <p>
           Many individuals struggle to share their thoughts and feelings with
@@ -19,8 +31,8 @@ const page = () => {
           experiences, interests, and challenges. We believe that everyone
           deserves a safe space to share their voice.
         </p>
-      </div>
-      <div>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Combatting Loneliness</Heading>
         <p>
           In today’s fast-paced world, many people experience feelings of
@@ -32,8 +44,8 @@ const page = () => {
           conversations, we aim to help individuals find companionship and
           support in a welcoming environment.
         </p>
-      </div>
-      <div>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Facilitating Genuine Connections</Heading>
         <p>
           While most social platforms focus on curated feeds and likes, we
@@ -43,8 +55,8 @@ const page = () => {
           interactions over superficial likes, we help users build lasting
           connections that can lead to friendship and support.
         </p>
-      </div>
-      <div>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Personalized Engagement</Heading>
         <p>
           We understand that every individual has unique preferences and needs.
@@ -54,8 +66,8 @@ const page = () => {
           empowers users to explore connections that resonate with them, making
           every interaction more meaningful.
         </p>
-      </div>
-      <div>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Looking to the Future</Heading>
         <p>
           We are committed to continuously improving our platform by exploring
@@ -64,8 +76,8 @@ const page = () => {
           multimedia tools, to enrich conversations and make interactions even
           more enjoyable.
         </p>
-      </div>
-      <div>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Join Us in Our Mission</Heading>
         <p>
           We believe that everyone deserves to feel connected and supported. By
@@ -78,7 +90,7 @@ const page = () => {
         <div className='mt-[2rem]'>
           <Button>Join waitlist</Button>
         </div>
-      </div>
+      </MHmotion.div>
     </PageLayout>
   );
 };

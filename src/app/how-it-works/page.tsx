@@ -1,12 +1,22 @@
+'use client';
 import React from 'react';
 import PageLayout from '../_components/PageLayout';
 import Heading from '@/components/ui/heading';
+import { MHmotion } from '@/components';
 
+const fadeInRightAnimation = {
+  initial: { opacity: 0, x: '-5rem' },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.5 },
+  viewport: { once: true },
+};
 const page = () => {
   return (
     <PageLayout>
-      <Heading>How it works</Heading>
-      <div>
+      <MHmotion.div {...fadeInRightAnimation}>
+        <Heading>How it works</Heading>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Open for any conversation</Heading>
         <p>
           On most platforms, your profile and identity are visible, making it
@@ -18,8 +28,8 @@ const page = () => {
           relief from pain and loneliness through honest, anonymous
           interactions.
         </p>
-      </div>
-      <div>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Mystery Connections</Heading>
 
         <p>
@@ -33,8 +43,8 @@ const page = () => {
           interactions you want to pursue. Whether it's your first connection or
           your tenth, there’s always a new opportunity waiting for you.
         </p>
-      </div>
-      <div>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Chat recomendations</Heading>
 
         <p>
@@ -43,30 +53,31 @@ const page = () => {
           your conversations. This personalized approach ensures that each
           exchange becomes more engaging and tailored to your preferences.
         </p>
-      </div>
-      <div>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Find Connections</Heading>
         <p>
-          Connect with individuals who are also seeking open and meaningful
-          conversations. Our platform pairs you with random users from around
-          the globe, allowing you to engage in real-time text messaging. By
-          facilitating new connections, our goal is to combat loneliness and
-          provide a supportive space where you can meet and interact with a
-          diverse range of people, each with their own unique stories.
+          Connect with inMHmotion.dividuals who are also seeking open and
+          meaningful conversations. Our platform pairs you with random users
+          from around the globe, allowing you to engage in real-time text
+          messaging. By facilitating new connections, our goal is to combat
+          loneliness and provide a supportive space where you can meet and
+          interact with a MHmotion.diverse range of people, each with their own
+          unique stories.
         </p>
-      </div>
-      <div>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Personalize with filters</Heading>
         <p>
           To make your experience even more personalized, our advanced filtering
           system allows you to customize your search criteria. You can define
           specific parameters, such as age, gender, and more, to find and
-          connect with individuals who meet your preferences. This tailored
-          approach ensures that your connections align with your interests,
-          enhancing the depth and relevance of every interaction.
+          connect with inMHmotion.dividuals who meet your preferences. This
+          tailored approach ensures that your connections align with your
+          interests, enhancing the depth and relevance of every interaction.
         </p>
-      </div>
-      <div>
+      </MHmotion.div>
+      <MHmotion.div {...fadeInRightAnimation}>
         <Heading varient='small'>Only Text and Emoji</Heading>
         <p>
           Embrace the simplicity of communication on our platform. By focusing
@@ -86,7 +97,7 @@ const page = () => {
           on text and emojis ensures that every chat remains accessible and
           enjoyable.
         </p>
-      </div>
+      </MHmotion.div>
     </PageLayout>
   );
 };

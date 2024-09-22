@@ -1,6 +1,16 @@
+'use client';
+
 import { Button } from '@/components/ui/Buttons';
 import Image from 'next/image';
 import React from 'react';
+import { MHmotion } from '@/components';
+
+const fadeInRightAnimation = {
+  initial: { opacity: 0, y: '5rem' },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 1 },
+  viewport: { once: true },
+};
 
 const Footer = () => {
   return (
@@ -8,17 +18,22 @@ const Footer = () => {
       <div className='container'>
         <div className='py-[2rem] flex sm:flex-row flex-col max-sm:items-center gap-[4rem] max-sm:text-center'>
           <div className='flex flex-col gap-[2rem]'>
-            <Image
-              src={'/long-logo-footer.svg'}
-              alt={'logo'}
-              width={100}
-              height={100}
-              className='max-w-[15rem] h-auto w-auto overflow-hidden'
-              blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADA...'
-              placeholder='blur'
-              loading='lazy'
-            />
-            <div className='mt-[2rem] max-sm:hidden lg:hidden'>
+            <MHmotion.div {...fadeInRightAnimation}>
+              <Image
+                src={'/long-logo-footer.svg'}
+                alt={'logo'}
+                width={100}
+                height={100}
+                className='max-w-[15rem] h-auto w-auto overflow-hidden'
+                blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADA...'
+                placeholder='blur'
+                loading='lazy'
+              />
+            </MHmotion.div>
+            <MHmotion.div
+              {...fadeInRightAnimation}
+              className='mt-[2rem] max-sm:hidden lg:hidden'
+            >
               If you have any concerns reguarding our service or your privacy
               mail us on:{' '}
               <a
@@ -27,21 +42,29 @@ const Footer = () => {
               >
                 mailto:abc@gmail.com
               </a>
-            </div>
+            </MHmotion.div>
           </div>
           <div className='max-w-[30rem] w-full flex flex-col items-stretch gap-[2rem]'>
-            <p>
+            <MHmotion.p {...fadeInRightAnimation}>
               Connect anonymously and share your thoughts in a safe space. Find
               a listening ear whenever you need it.
-            </p>
-            <Button>Join the Waitlist</Button>
+            </MHmotion.p>
+            <MHmotion.div
+              {...fadeInRightAnimation}
+              className='flex flex-col items-stretch'
+            >
+              <Button>Join the Waitlist</Button>
+            </MHmotion.div>
           </div>
 
           <div className='max-w-[22rem] sm:max-lg:hidden'>
-            <div className='font-bold text-[0.75rem] text-white/80'>
+            <MHmotion.div
+              {...fadeInRightAnimation}
+              className='font-bold text-[0.75rem] text-white/80'
+            >
               Need Help? contact us
-            </div>
-            <div className='mt-[2rem] '>
+            </MHmotion.div>
+            <MHmotion.div {...fadeInRightAnimation} className='mt-[2rem] '>
               If you have any concerns reguarding our service or your privacy
               mail us on:{' '}
               <a
@@ -50,21 +73,27 @@ const Footer = () => {
               >
                 mailto:abc@gmail.com
               </a>
-            </div>
-            <div className='flex gap-[1rem] sm:hidden justify-center mt-[2rem]'>
+            </MHmotion.div>
+            <MHmotion.div
+              {...fadeInRightAnimation}
+              className='flex gap-[1rem] sm:hidden justify-center mt-[2rem]'
+            >
               <SocialMediaButton imgUrl='/instagram.png' />
               <SocialMediaButton imgUrl='/facebook-f.png' />
-            </div>
+            </MHmotion.div>
           </div>
         </div>
         <div className='py-[2rem] border-t-[1px] border-t-gray-500 flex justify-between items-end'>
-          <p className='max-sm:text-center'>
+          <MHmotion.p {...fadeInRightAnimation} className='max-sm:text-center'>
             &copy; copyright - 2024 . created and maintained by Tamojit and Team
-          </p>
-          <div className='flex gap-[1rem] max-sm:hidden'>
+          </MHmotion.p>
+          <MHmotion.div
+            {...fadeInRightAnimation}
+            className='flex gap-[1rem] max-sm:hidden'
+          >
             <SocialMediaButton imgUrl='/instagram.png' />
             <SocialMediaButton imgUrl='/facebook-f.png' />
-          </div>
+          </MHmotion.div>
         </div>
       </div>
     </div>
