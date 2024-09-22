@@ -75,7 +75,7 @@ const page = () => {
           journey to redefine social connections and foster meaningful
           relationships.
         </p>
-        <div className='mt-[0.5rem]'>
+        <div className='mt-[2rem]'>
           <Button>Join waitlist</Button>
         </div>
       </div>

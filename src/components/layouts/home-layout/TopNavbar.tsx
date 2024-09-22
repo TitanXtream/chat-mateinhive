@@ -79,7 +79,7 @@ const TopNavbar = () => {
         transition
         open={navMenuIsOpenned}
         className={
-          'fixed inset-0 w-full h-svh bg-white z-[20] data-[closed]:translate-x-[-100%]'
+          'fixed inset-0 w-full h-svh bg-white z-[20]  transition duration-300 ease-out data-[closed]:translate-x-[100%] data-[closed]:opacity-0'
         }
       >
         <Suspense fallback={<LoadingSpinner />}>

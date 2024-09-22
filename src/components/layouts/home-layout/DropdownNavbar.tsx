@@ -3,6 +3,7 @@ import { Button, IconButton } from '@/components/ui/Buttons';
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const DropdownNavbar = ({ onClose }: { onClose: () => void }) => {
   // console.log('Menu Rendered');
@@ -10,19 +11,21 @@ const DropdownNavbar = ({ onClose }: { onClose: () => void }) => {
   const router = useRouter();
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col z-[10]'>
       <div className='flex flex-col divide-y-[1px] divide-brand-gray-light border-b-[1px] border-brand-gray-light'>
         <div className='container flex justify-between h-[5rem] items-center  gap-[1rem] '>
-          <Image
-            src={'/long-logo.svg'}
-            alt={'logo'}
-            width={100}
-            height={100}
-            className='max-h-[3rem] h-auto w-auto overflow-hidden'
-            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADA...'
-            placeholder='blur'
-            loading='lazy'
-          />
+          <Link href={'/'} onClick={onClose}>
+            <Image
+              src={'/long-logo.svg'}
+              alt={'logo'}
+              width={100}
+              height={100}
+              className='max-h-[3rem] h-auto w-auto overflow-hidden'
+              blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADA...'
+              placeholder='blur'
+              loading='lazy'
+            />
+          </Link>
           <IconButton onClick={onClose}>
             <CrossIcon />
           </IconButton>

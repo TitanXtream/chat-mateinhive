@@ -2,6 +2,7 @@ import { Button, HomeCaresol, LoadingSpinner } from '@/components';
 import Image from 'next/image';
 import Section from './_components/Section';
 import { Suspense } from 'react';
+import SubHeroSection from './_components/SubHeroSection';
 
 export default function Home() {
   return (
@@ -10,17 +11,7 @@ export default function Home() {
         <HomeCaresol />
       </Suspense>
 
-      <section className='w-full flex flex-col gap-[2rem] md:pt-[10rem] pb-[5rem] pt-[5rem] px-[1rem] items-center'>
-        <h1 className='font-bold text-[3rem] text-center'>Feeling lonely?</h1>
-        <p className='lg:max-w-[50rem] max-w-[24.5rem] text-center text-[1.5rem] max-lg:text-justify'>
-          Connect with someone new and anonymous to share your thoughts freely.
-          Whether it's things you wouldn't tell friends or family, our app
-          offers a safe space to open up and feel heard.{' '}
-          <strong>
-            Join us, and find a listening ear whenever you need one
-          </strong>
-        </p>
-      </section>
+      <SubHeroSection />
       <Section imageUrl='/phone-image-1.png' title='Only Text?'>
         <p className='sm:text-start text-center'>
           Connect through words and emojis only. No images, no video, just real
@@ -46,9 +37,6 @@ export default function Home() {
           Protecting your data is our atmost priority. All messages are
           end-to-end encrypted.
         </p>
-        <div>
-          <Button>Privacy policy</Button>
-        </div>
       </Section>
     </div>
   );

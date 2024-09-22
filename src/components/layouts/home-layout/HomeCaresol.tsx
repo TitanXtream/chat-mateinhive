@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { JoinWaitListSpecialButton } from '@/components/ui/Buttons';
 import { isDesktop } from 'react-device-detect';
-import { MImotion } from '@/components';
+import { MHmotion } from '@/components';
 
 const fadeInAnimation = {
   initial: { y: '5rem', opacity: 0 },
@@ -37,31 +37,31 @@ const HomeCaresol = () => {
                   : 'md:text-[1.1rem] text- text-[0.75em]'
               }`}
             >
-              <MImotion.div className='max-lg:hidden font-semibold text-[4em] leading-[96%]'>
+              <MHmotion.div className='max-lg:hidden font-semibold text-[4em] leading-[96%]'>
                 Let’s not
                 <br /> be Alone
-              </MImotion.div>
-              <MImotion.div className='lg:hidden font-semibold text-[3em] leading-[96%]'>
+              </MHmotion.div>
+              <MHmotion.div className='lg:hidden font-semibold text-[3em] leading-[96%]'>
                 Let’s not be Alone
-              </MImotion.div>
-              <MImotion.div
+              </MHmotion.div>
+              <MHmotion.div
                 className={`lg:text-[2.4em] ${
                   isDesktop ? 'text-[2.4rem]' : 'sm:text-[2rem] text-[1.5rem]'
                 } leading-[96%]`}
               >
                 Text somebody
-              </MImotion.div>
-              <MImotion.div className='mt-[2em] lg:max-w-[15em]'>
+              </MHmotion.div>
+              <MHmotion.div className='mt-[2em] lg:max-w-[15em]'>
                 But they don’t know who you are, where do you come from,
-              </MImotion.div>
-              <MImotion.div className='font-bold lg:max-w-[15em]'>
+              </MHmotion.div>
+              <MHmotion.div className='font-bold lg:max-w-[15em]'>
                 So just text whatever you want.
-              </MImotion.div>
+              </MHmotion.div>
             </div>
           </div>
 
           <div className='absolute z-[1] bottom-[--hero-image-padding] inset-x-[--hero-image-padding] w-auto flex justify-center'>
-            <MImotion.div
+            <MHmotion.div
               className='lg:max-w-[30rem] w-full h-[3.5rem] flex items-stretch'
               initial={{ y: '5rem', opacity: 0 }}
               whileInView={{
@@ -71,13 +71,16 @@ const HomeCaresol = () => {
               transition={{
                 duration: 1,
               }}
+              viewport={{
+                once: true,
+              }}
             >
               <JoinWaitListSpecialButton fullWidth>
                 Join the waitlist
               </JoinWaitListSpecialButton>
-            </MImotion.div>
+            </MHmotion.div>
           </div>
-          <MImotion.div
+          <MHmotion.div
             className='absolute z-[1] right-[--hero-image-padding] lg:top-[10rem] w-[35%] flex justify-center top-[--hero-image-padding]'
             initial={{ x: '5rem', opacity: 0 }}
             animate={{
@@ -96,7 +99,7 @@ const HomeCaresol = () => {
               height={100}
               className='h-auto w-full'
             />
-          </MImotion.div>
+          </MHmotion.div>
         </div>
       </div>
     </section>

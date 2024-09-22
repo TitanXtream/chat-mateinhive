@@ -15,4 +15,4 @@ export { default as LoadingSpinner } from './ui/LoadingSpinner';
 export { default as ChatListItem } from './layouts/chat/ChatListItem';
 export { default as MessageInputBar } from './layouts/chat/MessageInputBar';
 
-export { motion as MImotion } from 'framer-motion';
+export { motion as MHmotion } from 'framer-motion';
