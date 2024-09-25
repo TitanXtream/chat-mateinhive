@@ -32,8 +32,10 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   const user = await getUser();
 
@@ -45,14 +47,17 @@ export default async function RootLayout({
         <AuthProvider>
           <Device>
             {() => (
-              <AuthConsumer
-                loggedInChild={
-                  <ChatPageSupportProvider>
-                    <ChatPage />
-                  </ChatPageSupportProvider>
-                }
-                unloggedInChild={<HomeLayout>{children}</HomeLayout>}
-              />
+              <>
+                {modal}
+                <AuthConsumer
+                  loggedInChild={
+                    <ChatPageSupportProvider>
+                      <ChatPage />
+                    </ChatPageSupportProvider>
+                  }
+                  unloggedInChild={<HomeLayout>{children}</HomeLayout>}
+                />
+              </>
             )}
           </Device>
         </AuthProvider>

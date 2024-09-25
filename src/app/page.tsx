@@ -14,7 +14,6 @@ export default function Home() {
             className='h-[3rem] w-auto'
           />
           <p className='text-center'>
-            {' '}
             Connect with someone new and anonymous to share your thoughts
             freely. Whether it&apos;s things you wouldn&apos;t tell friends or
             family, our app offers a safe space to open up and feel heard.{' '}

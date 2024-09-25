@@ -104,9 +104,14 @@ type OAuthButtonProps = {
 };
 export const OAuthButton = ({ icon, label }: OAuthButtonProps) => {
   return (
-    <button className='flex rounded-[1rem] px-[1rem] py-[0.5rem] gap-[1.5rem] bg-white border-[2px] border-brand-gray-light hover:bg-primary-light/95 text-primary-dark'>
+    <Link
+      href={{
+        pathname: '/terms-and-services',
+      }}
+      className='flex rounded-[1rem] px-[1rem] py-[0.5rem] gap-[1.5rem] bg-white border-[2px] border-brand-gray-light hover:bg-primary-light/95 text-primary-dark'
+    >
       <div className='size-[1.75rem] bg-transparent'>{icon}</div>
       <p>{label}</p>
-    </button>
+    </Link>
   );
 };
