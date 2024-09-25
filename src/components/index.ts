@@ -1,6 +1,5 @@
 export { default as HomeLayout } from './layouts/home-layout/HomeLayout';
-export { default as HomeCaresol } from './layouts/home-layout/HomeCaresol';
-export { default as DropdownNavbar } from './layouts/home-layout/HomeCaresol';
+export { default as DropdownNavbar } from './layouts/home-layout/DropdownNavbar';
 export { default as ChatPage } from './layouts/chat/ChatPage';
 export * from './layouts/chat/ChatMessages';
 export { default as ChatDate } from './layouts/chat/ChatDate';

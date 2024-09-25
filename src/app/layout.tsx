@@ -6,9 +6,9 @@ import { ChatPage, HomeLayout, LoadingSpinner } from '@/components';
 
 import { getUser } from './actions';
 
-import { Auth0Consumer, ChatPageSupportProvider } from '@/features';
-import { UserProvider } from '@auth0/nextjs-auth0/client';
 import dynamic from 'next/dynamic';
+import AuthProvider, { AuthConsumer } from '@/features/AuthenticationProvider';
+import { ChatPageSupportProvider } from '@/features';
 
 const Device = dynamic(() => import('@/features/DeviceProvider'), {
   ssr: false,
@@ -42,25 +42,10 @@ export default async function RootLayout({
   return (
     <html lang='en'>
       <body className={`${defaultFonts.className} antialiased bg-canvas-dark`}>
-        {/* <AuthProvider>
+        <AuthProvider>
           <Device>
             {() => (
               <AuthConsumer
-                loggedInChild={
-                  <ChatPageSupportProvicer>
-                    <ChatPage />
-                  </ChatPageSupportProvicer>
-                }
-                unloggedInChild={<HomeLayout>{children}</HomeLayout>}
-              />
-            )}
-          </Device>
-        </AuthProvider> */}
-
-        <UserProvider>
-          <Device>
-            {() => (
-              <Auth0Consumer
                 loggedInChild={
                   <ChatPageSupportProvider>
                     <ChatPage />
@@ -70,7 +55,7 @@ export default async function RootLayout({
               />
             )}
           </Device>
-        </UserProvider>
+        </AuthProvider>
       </body>
     </html>
   );

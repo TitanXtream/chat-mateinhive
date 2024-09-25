@@ -53,7 +53,7 @@ const Footer = () => {
               {...fadeInRightAnimation}
               className='flex flex-col items-stretch'
             >
-              <Button>Join the Waitlist</Button>
+              {/* <Button>Join the Waitlist</Button> */}
             </MHmotion.div>
           </div>
 

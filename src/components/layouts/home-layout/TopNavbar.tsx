@@ -11,6 +11,7 @@ import React, { ReactNode, Suspense, useState } from 'react';
 
 import dynamic from 'next/dynamic';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import { signIn } from 'next-auth/react';
 
 const DropdownNavbar = dynamic(() => import('./DropdownNavbar'));
 
@@ -59,17 +60,17 @@ const TopNavbar = () => {
         </ul>
         <div className='max-lg:hidden'>
           <Button
-            as='a'
-            href='/api/auth/login'
-            // onClick={() => {
-            //   // setUser({ name: 'AGH123#456L' });
-            //   // loginWithPopup();
-            // }}
+            // as='a'
+            // href='/api/auth/login'
+            onClick={() => {
+              // setUser({ name: 'AGH123#456L' });
+              // loginWithPopup();
+              signIn('facebook');
+            }}
           >
             login
           </Button>
         </div>
-
         {/* <MenuButton as={IconButton}>Hi</MenuButton> */}
         <div className='lg:hidden'>
           <IconButton onClick={() => setNavMenuIsOpenned(true)}>

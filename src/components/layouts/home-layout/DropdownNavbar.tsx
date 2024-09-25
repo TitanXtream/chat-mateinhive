@@ -1,3 +1,5 @@
+'use client';
+
 import { CrossIcon } from '@/assets/icons';
 import { Button, IconButton } from '@/components/ui/Buttons';
 import Image from 'next/image';
