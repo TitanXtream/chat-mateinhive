@@ -14,7 +14,7 @@ const fadeInRightAnimation = {
 
 const Footer = () => {
   return (
-    <div className='mt-[2rem] bg-gray-900 text-white'>
+    <div className='mt-[2rem] bg-gray-900 text-white overflow-hidden'>
       <div className='container'>
         <div className='py-[2rem] flex sm:flex-row flex-col max-sm:items-center gap-[4rem] max-sm:text-center'>
           <div className='flex flex-col gap-[2rem]'>
@@ -84,16 +84,16 @@ const Footer = () => {
           </div>
         </div>
         <div className='py-[2rem] border-t-[1px] border-t-gray-500 flex justify-between items-end'>
-          <MHmotion.p {...fadeInRightAnimation} className='max-sm:text-center'>
+          <p className='max-sm:text-center'>
             &copy; copyright - 2024 . created and maintained by Tamojit and Team
-          </MHmotion.p>
-          <MHmotion.div
+          </p>
+          <div
             {...fadeInRightAnimation}
             className='flex gap-[1rem] max-sm:hidden'
           >
             <SocialMediaButton imgUrl='/instagram.png' />
             <SocialMediaButton imgUrl='/facebook-f.png' />
-          </MHmotion.div>
+          </div>
         </div>
       </div>
     </div>

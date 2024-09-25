@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
-// import localFont from 'next/font/local';
+
 import { Lato } from 'next/font/google';
 import './globals.css';
 import { ChatPage, HomeLayout, LoadingSpinner } from '@/components';
-import AuthProvider, { AuthConsumer } from '@/features/AuthenticationProvider';
+
 import { getUser } from './actions';
 
-import ChatPageSupportProvicer from '@/features/ChatPageSupportProvicer';
+import { Auth0Consumer, ChatPageSupportProvider } from '@/features';
+import { UserProvider } from '@auth0/nextjs-auth0/client';
 import dynamic from 'next/dynamic';
 
 const Device = dynamic(() => import('@/features/DeviceProvider'), {
@@ -41,7 +42,7 @@ export default async function RootLayout({
   return (
     <html lang='en'>
       <body className={`${defaultFonts.className} antialiased bg-canvas-dark`}>
-        <AuthProvider>
+        {/* <AuthProvider>
           <Device>
             {() => (
               <AuthConsumer
@@ -54,7 +55,22 @@ export default async function RootLayout({
               />
             )}
           </Device>
-        </AuthProvider>
+        </AuthProvider> */}
+
+        <UserProvider>
+          <Device>
+            {() => (
+              <Auth0Consumer
+                loggedInChild={
+                  <ChatPageSupportProvider>
+                    <ChatPage />
+                  </ChatPageSupportProvider>
+                }
+                unloggedInChild={<HomeLayout>{children}</HomeLayout>}
+              />
+            )}
+          </Device>
+        </UserProvider>
       </body>
     </html>
   );

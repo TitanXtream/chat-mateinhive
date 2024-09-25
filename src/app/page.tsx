@@ -1,5 +1,5 @@
-import { Button, HomeCaresol, LoadingSpinner } from '@/components';
-import Image from 'next/image';
+import { HomeCaresol, LoadingSpinner } from '@/components';
+
 import Section from './_components/Section';
 import { Suspense } from 'react';
 import SubHeroSection from './_components/SubHeroSection';

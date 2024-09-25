@@ -8,7 +8,7 @@ import ChatListItem from './ChatListItem';
 
 import { ChatStatus } from './types';
 import ChatBox from './ChatBox';
-import { useChatSupportContext } from '@/features/ChatPageSupportProvicer';
+import { useChatSupportContext } from '@/features/ChatPageSupportProvider';
 
 import FindNewFriendsButton from './FindNewFriendsButton';
 import ChatFilterBox from './ChatFilterBox';

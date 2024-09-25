@@ -1,7 +1,7 @@
 'use client';
 
 import SearchIcon from '@/assets/icons/SearchIcon';
-import { useChatSupportContext } from '@/features/ChatPageSupportProvicer';
+import { useChatSupportContext } from '@/features/ChatPageSupportProvider';
 import React from 'react';
 
 const FindNewFriendsButton = () => {

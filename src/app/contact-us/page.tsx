@@ -2,10 +2,9 @@
 
 import React from 'react';
 import PageLayout from '../_components/PageLayout';
-import Heading from '@/components/ui/heading';
+
 import { EnvelopeIcon } from '@/assets/icons';
 import { MHmotion } from '@/components';
-import { animate } from 'framer-motion';
 
 const fadeInRightAnimation = {
   initial: { opacity: 0, y: '5rem' },

@@ -10,7 +10,7 @@ const ChatContext = createContext<ChatPageSupportProvicerValueType | null>(
   null
 );
 
-const ChatPageSupportProvicer = ({
+const ChatPageSupportProvider = ({
   children,
 }: {
   children: React.ReactNode;
@@ -23,7 +23,7 @@ const ChatPageSupportProvicer = ({
   );
 };
 
-export default ChatPageSupportProvicer;
+export default ChatPageSupportProvider;
 
 export const useChatSupportContext = () =>
   useContext(ChatContext) as ChatPageSupportProvicerValueType;

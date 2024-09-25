@@ -2,7 +2,6 @@
 
 import { BarsIcon } from '@/assets/icons';
 import { Button, IconButton } from '@/components/ui/Buttons';
-import { useAuthContext } from '@/features/AuthenticationProvider';
 import { Dialog } from '@headlessui/react';
 import { motion } from 'framer-motion';
 
@@ -16,7 +15,8 @@ import LoadingSpinner from '@/components/ui/LoadingSpinner';
 const DropdownNavbar = dynamic(() => import('./DropdownNavbar'));
 
 const TopNavbar = () => {
-  const { setUser } = useAuthContext();
+  // const { setUser } = useAuthContext();
+  // const { loginWithPopup } = useAuth0();
   const [navMenuIsOpenned, setNavMenuIsOpenned] = useState(false);
   return (
     <>
@@ -59,9 +59,12 @@ const TopNavbar = () => {
         </ul>
         <div className='max-lg:hidden'>
           <Button
-            onClick={() => {
-              setUser({ name: 'AGH123#456L' });
-            }}
+            as='a'
+            href='/api/auth/login'
+            // onClick={() => {
+            //   // setUser({ name: 'AGH123#456L' });
+            //   // loginWithPopup();
+            // }}
           >
             login
           </Button>
