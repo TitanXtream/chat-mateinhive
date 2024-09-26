@@ -10,6 +10,7 @@ export { default as FindNewFriendsButton } from './layouts/chat/FindNewFriendsBu
 export * from './ui/Buttons';
 export * from './ui/DropdownMenu';
 export { default as LoadingSpinner } from './ui/LoadingSpinner';
+export { default as Modal } from './ui/Modal';
 
 export { default as ChatListItem } from './layouts/chat/ChatListItem';
 export { default as MessageInputBar } from './layouts/chat/MessageInputBar';

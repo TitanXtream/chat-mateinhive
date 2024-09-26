@@ -24,7 +24,7 @@ export default function Home() {
           <div className='w-full flex'>
             <Image
               src='/private-credential.png'
-              alt='logo'
+              alt='Hidden User name'
               width={100}
               height={100}
               sizes='100vw'

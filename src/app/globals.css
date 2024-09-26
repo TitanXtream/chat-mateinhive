@@ -8,3 +8,15 @@
     color: #461229;
   }
 }
+
+@layer utilities {
+  .mh-modal-scrollbar-2::-webkit-scrollbar {
+    width: 0.75rem;
+  }
+  .mh-modal-scrollbar-2::-webkit-scrollbar-track {
+    margin: 2rem 0;
+  }
+  .mh-modal-scrollbar-2::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+  }
+}

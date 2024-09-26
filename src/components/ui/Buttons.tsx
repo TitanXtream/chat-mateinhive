@@ -6,7 +6,7 @@ import {
   ReactNode,
 } from 'react';
 
-type Props = { fullWidth?: boolean } & (
+type Props = { fullWidth?: boolean; varient?: 'contained' | 'text' } & (
   | ({
       as?: 'button';
     } & Omit<
@@ -30,6 +30,7 @@ type Props = { fullWidth?: boolean } & (
 export const Button = ({
   children,
   fullWidth,
+  varient = 'contained',
   as = 'button',
   ...props
 }: Props) => {
@@ -38,12 +39,20 @@ export const Button = ({
   return (
     // @ts-expect-error / props type will be correct automatically
     <CustomElement
-      className={`relative flex bg-primary text-primary-text px-[3rem] py-[0.75rem] rounded-[1rem] hover:shadow-primary-dark hover:shadow-md hover:bg-primary-light transition-all duration-500 overflow-hidden group ${
+      className={`relative flex justify-center px-[3rem] py-[0.75rem] rounded-[1rem]  hover:shadow-md  transition-all duration-500 overflow-hidden group ${
+        varient === 'contained'
+          ? 'bg-primary text-primary-text hover:bg-primary-light hover:shadow-primary-dark'
+          : 'text-primary hover:bg-primary-light'
+      } ${
         fullWidth ? 'w-full' : ''
-      }`}
+      } disabled:pointer-events-none disabled:bg-brand-gray-main`}
       {...props}
     >
-      <div className='absolute w-[200%] h-[200%] rounded-full bg-primary-dark z-[4] inset-0 translate-x-[100%] group-hover:translate-x-[-50%] transition transform duration-700 ease-in-out'></div>
+      {varient === 'contained' ? (
+        <div className='absolute w-[200%] h-[200%] rounded-full bg-primary-dark z-[4] inset-0 translate-x-[100%] group-hover:translate-x-[-50%] transition transform duration-700 ease-in-out'></div>
+      ) : (
+        ''
+      )}
       <div className='relative z-[5]'>{children}</div>
     </CustomElement>
   );
